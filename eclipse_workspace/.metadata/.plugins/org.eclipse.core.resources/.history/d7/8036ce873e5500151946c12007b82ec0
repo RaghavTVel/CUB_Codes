@@ -1,0 +1,24 @@
+import time
+from time import strftime
+
+def timeComparer(no):
+    seconds = strftime("%S")
+    print("Time in seconds is: "+seconds)
+    if int(no)==int(seconds):
+        print("Successful")
+    else:
+        print("Failure")
+        
+attempts = 5
+
+number = input("Enter a number between 1 and 59: ")
+
+while attempts>0:
+    timeComparer(number)
+    attempts = attempts-1
+
+quit()
+
+
+        
+    

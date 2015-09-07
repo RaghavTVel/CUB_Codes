@@ -1,0 +1,7 @@
+import time
+from time import strftime
+
+number = input("Enter a number between 1 and 59: ")
+seconds = time.localtime()
+strftime(%S)
+print(seconds)

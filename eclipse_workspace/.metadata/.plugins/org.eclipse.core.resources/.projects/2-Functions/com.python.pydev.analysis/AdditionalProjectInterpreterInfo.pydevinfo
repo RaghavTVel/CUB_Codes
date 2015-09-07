@@ -1,0 +1,23 @@
+-- VERSION_4
+-- START DISKCACHE_2
+R:\eclipse_workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\2-Functions\com.python.pydev.analysis\v2_indexcache
+file2|1441621549180525000|R:\eclipse_workspace\2-Functions\file2.py
+file1|1441616552801089000|R:\eclipse_workspace\2-Functions\file1.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+2=file2
+1=file1
+-- END DICTIONARY
+-- START TREE 1
+6
+att|1|attempts!11@
+min|2|minutes_local!19@minutes_mdt!19@
+new|1|new_page!19@
+num|1|number!11@
+pag|1|page_str!19@
+tim|2|timeReturn!18@timeComparer!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

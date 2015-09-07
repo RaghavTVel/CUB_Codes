@@ -1,0 +1,25 @@
+import time
+from time import strftime
+import urllib.request
+import re 
+
+def timeReturn(page_string):
+    time_mdt = re.search('\w\w\w[.]\s\d\d[,]\s\d\d[:]\d\d[:]\d\d\s\w\w\s[M][S][T]',page_string)
+    time_edt = re.search('\w\w\w[.]\s\d\d[,]\s\d\d[:]\d\d[:]\d\d\s\w\w\s[E][S][T]',page_string)
+    time_alaska = re.search('\w\w\w[.]\s\d\d[,]\s\d\d[:]\d\d[:]\d\d\s\w\w\s[A][K][S][T]',page_string)
+    
+    if hasattr(time_mdt,'group'):
+        print(time_mdt.group(0))
+    if hasattr(time_edt,'group'):
+        print(time_edt.group(0))
+    if hasattr(time_alaska,'group'):
+        print(time_alaska.group(0))
+        
+    return(time_mdt.group(0)[12:14])
+
+new_page = urllib.request.urlopen("https://web.archive.org/web/20150205195107/http://tycho.usno.navy.mil/timer.html")
+page_str = new_page.read().decode("utf8")
+#print(page_str)
+timeReturn(page_str)
+
+quit()

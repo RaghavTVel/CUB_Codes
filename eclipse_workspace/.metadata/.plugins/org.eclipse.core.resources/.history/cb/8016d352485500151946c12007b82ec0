@@ -1,0 +1,17 @@
+import time
+from time import strftime
+import urllib.request
+import re 
+
+def timeReturn(page_string):
+    time_mdt = re.search('\d\d[:]\d\d[:]\d\d\s\w\w\s[M][S][T]',page_string)
+    if hasattr(time_mdt,'group'):
+        print(time_mdt.group(0))
+    print("In here")
+
+new_page = urllib.request.urlopen("https://web.archive.org/web/20150205195107/http://tycho.usno.navy.mil/timer.html")
+page_str = new_page.read().decode("utf8")
+#print(page_str)
+timeReturn(page_str)
+
+quit()

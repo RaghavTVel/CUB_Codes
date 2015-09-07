@@ -1,0 +1,15 @@
+import time
+from time import strftime
+import urllib.request
+
+def timeReturn(page_string):
+    time_mdt = re.search('\w\w\w[.]',page_string)
+    print(time_mdt)
+    
+
+new_page = urllib.request.urlopen("https://web.archive.org/web/20150205195107/http://tycho.usno.navy.mil/timer.html")
+page_str = new_page.read().decode("utf8")
+print(page_str)
+timeReturn(page_str)
+
+quit()
