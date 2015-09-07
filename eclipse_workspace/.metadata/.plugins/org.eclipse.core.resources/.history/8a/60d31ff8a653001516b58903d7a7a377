@@ -1,0 +1,30 @@
+import socket
+import configparser
+from pathlib import Path
+
+size=1024
+config = configparser.ConfigParser()
+config.read('ws.conf')
+port = config['DEFAULT']['port']
+root = config['DEFAULT']['root']
+
+print("Port: "+port)
+print("Root: "+root)
+
+port = int(port)
+
+soc = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+soc.bind(('',port))
+soc.listen(1)
+
+while True:
+    conn, addr = soc.accept()
+    data = conn.recv(size)
+    print(data)
+    if data:
+        #p = Path.open(root+'/index.html', 'r', -1, None, None, None)
+        p = Path(root+'/index.html').text()
+        conn.send()
+    print("Just In")
+    conn.close()

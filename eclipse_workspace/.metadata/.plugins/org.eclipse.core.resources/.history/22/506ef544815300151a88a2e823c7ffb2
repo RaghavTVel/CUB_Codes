@@ -1,0 +1,13 @@
+import socket
+
+host = ''
+port = 8080
+size = 1024
+
+soc = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+soc.bind(host,port)
+soc.listen(1)
+
+while True:
+    conn, addr = soc.accept()

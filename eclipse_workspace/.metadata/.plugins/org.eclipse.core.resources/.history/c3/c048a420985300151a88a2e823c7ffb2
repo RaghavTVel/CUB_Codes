@@ -1,0 +1,23 @@
+import http.server
+import socketserver
+from urllib.request import Request
+from http import client
+
+host = ''
+port = 8080
+size = 1024
+   
+class http.server.SimpleHTTPRequestHandler(Request,clien):
+    def do_GET(self):
+        print("Inside Do Get")
+        self.send_response(200)
+        self.wfile.write('We have got here')
+        
+ 
+
+
+#httpd = socketserver.TCPServer((host,port),Handler)
+
+#print("Serving at Port " + str(port))
+
+#httpd.serve_forever()

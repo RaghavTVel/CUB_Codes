@@ -1,0 +1,7 @@
+import http.server
+import socketserver
+
+host = ''
+port = 8080
+size = 1024
+    

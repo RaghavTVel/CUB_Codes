@@ -1,0 +1,23 @@
+-- VERSION_4
+-- START DISKCACHE_2
+R:\eclipse_workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\1-Intro\com.python.pydev.analysis\v2_indexcache
+file2|1440736673028188000|R:\eclipse_workspace\1-Intro\file2.py
+file3|1440738242931679000|R:\eclipse_workspace\1-Intro\file3.py
+file1|1440734981237583000|R:\eclipse_workspace\1-Intro\file1.py
+-- END DISKCACHE
+-- START DICTIONARY
+3
+2=file2
+1=file3
+3=file1
+-- END DICTIONARY
+-- START TREE 1
+4
+ch|1|ch!11@
+ctr|1|ctr!11@
+in_|2|in_str_2!19@in_str_1!19@
+num|4|num_gen!11@num_gen!27@num_in!27@num_in!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

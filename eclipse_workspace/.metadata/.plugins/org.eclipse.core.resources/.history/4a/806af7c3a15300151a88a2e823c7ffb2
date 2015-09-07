@@ -1,0 +1,20 @@
+import socket
+import configparser
+
+config = configparser.ConfigParser()
+config.read('ws.conf')
+port = config['DEFAULT']
+
+
+    
+soc = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+soc.bind(('',port))
+soc.listen(1)
+
+while True:
+    conn, addr = soc.accept()
+    data = conn.recv(size)
+    print(data)
+    print("Just In")
+    conn.close()
