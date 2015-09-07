@@ -8,7 +8,7 @@ def timeComparer(no):
         print("Match")
         quit()
     else:
-        print("No Match")
+        print("Wrong guess!")
         
 attempts = 5
 

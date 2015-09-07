@@ -11,11 +11,11 @@ def timeReturn(page_string):
     if hasattr(time_mdt,'group'):
         print("Network time in MDT: "+time_mdt.group(0))
     if hasattr(time_edt,'group'):
-        print("Network time in EDT: "+time_edt.group(0))
+        print(time_edt.group(0))
     if hasattr(time_alaska,'group'):
-        print("Network time in Alaska: "+time_alaska.group(0))
+        print(time_alaska.group(0))
     
-    return(time_mdt.group(0)[12:14]) #Returning 'minutes' portion of the MDT string to the main program for comparison
+    return(time_mdt.group(0)[12:14]) #Returning 'minutes' portion of the string to the main program for comparison
 
 while True:
     new_page = urllib.request.urlopen("https://web.archive.org/web/20150205195107/http://tycho.usno.navy.mil/timer.html")

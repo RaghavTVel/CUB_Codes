@@ -5,10 +5,10 @@ def timeComparer(no):
     seconds = strftime("%S")
     print("Time in seconds is: "+seconds)
     if int(no)==int(seconds):
-        print("Match")
+        print("Guessed correct!")
         quit()
     else:
-        print("No Match")
+        print("Wrong guess!")
         
 attempts = 5
 
