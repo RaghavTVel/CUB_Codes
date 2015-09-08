@@ -8,8 +8,8 @@ config.read('ws.conf')
 port = config['DEFAULT']['port']
 root = config['DEFAULT']['root']
 
-#print("Port: "+port)
-#print("Root: "+root)
+print("Port: "+port)
+print("Root: "+root)
 
 port = int(port)
 
@@ -24,29 +24,51 @@ while True:
     data = conn.recv(size)
     #print(data)
     datastring = data.decode('ascii')
-    #print(datastring)
-    datastringlist = datastring.split('\n')
-    print(datastringlist)
+    datastringlist = datastring.split('\r\n')
+    #print(datastringlist)
     
     if data:
-        if datastringlist[0]=='GET / HTTP/1.1\r':
-            print("In Index HTML")
-            with open(root+"/index.html","r") as file1:
+        
+        if datastringlist[0]=='GET / HTTP/1.1':
+            #print("In Index HTML")
+            with open(root+"/index.html","rb") as file1:
                 file1content = file1.read()
-                #st = "HTTP/1.1 200 OK \n"+"Content-Type: text/html\n"+"Content-Length:206008\n"+"\n"
-                #file1content = st+file1content
-                file1asciicontent = file1content.encode('ascii')
-        if datastringlist[0]=='GET /text/thankyou.txt HTTP/1.1\r':
+                response_header = "HTTP/1.1 200 OK\r\n"+"Content-Type: text/html; charset=UTF-8\r\n"+"Content-Length: 620\r\n"+"\r\n"
+                response_header_binary = response_header.encode('ascii')
+                file1asciicontent = response_header_binary+file1content
+        
+        if datastringlist[0]=='GET /html/nextpage.html HTTP/1.1':
+            #print("In HTML")
+            with open(root+"/html/nextpage.html","rb") as file1:
+                file1content = file1.read()
+                response_header = "HTTP/1.1 200 OK\r\n"+"Content-Type: text/html; charset=UTF-8\r\n"+"Content-Length: 300\r\n"+"\r\n"
+                response_header_binary = response_header.encode('ascii')
+                file1asciicontent = response_header_binary+file1content
+        
+        if datastringlist[0]=='GET /text/thankyou.txt HTTP/1.1':
             #print("In Text")
             with open(root+"/text/thankyou.txt","rb") as file1:
-                file1asciicontent = file1.read()
-        if datastringlist[0]=='GET /images/space-wallpapers-9.jpg HTTP/1.1\r':
-            #print("In JPG")
-            with open(root+"/images/space-wallpapers-9.jpg","rb") as file1:
-                file1asciicontent = file1.read()
+                file1content = file1.read()
+                response_header = "HTTP/1.1 200 OK\r\n"+"Content-Type: text/plain\r\n"+"Content-Length: 60\r\n"+"\r\n"
+                response_header_binary = response_header.encode('ascii')
+                file1asciicontent = response_header_binary+file1content
+        
+        if datastringlist[0]=='GET /images/impact.gif HTTP/1.1':
+            #print("In GIF")
+            with open(root+"/images/impact.gif","rb") as file1:
+                file1content = file1.read()
+                response_header = "HTTP/1.1 200 OK\r\n"+"Content-Type: image/gif\r\n"+"Content-Length: 168998\r\n"+"\r\n"
+                response_header_binary = response_header.encode('ascii')
+                file1asciicontent = response_header_binary+file1content
+        
+        if datastringlist[0]=='GET /images/fractal.png HTTP/1.1':
+            #print("In PNG")
+            with open(root+"/images/fractal.png","rb") as file1:
+                file1content = file1.read()
+                response_header = "HTTP/1.1 200 OK\r\n"+"Content-Type: image/png\r\n"+"Content-Length: 131365\r\n"+"\r\n"
+                response_header_binary = response_header.encode('ascii')
+                file1asciicontent = response_header_binary+file1content
                
-      
-        #print(file1stringcontent)
         conn.send(file1asciicontent)
-    print("Near Exit point")
+    #print("Near Exit point")
     conn.close()

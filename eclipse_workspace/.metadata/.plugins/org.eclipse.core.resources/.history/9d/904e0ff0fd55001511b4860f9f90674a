@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<h1>
+Data Communications 1 - Assignment 1<br><br>
+</h1>
+</head>
+
+<title>
+Data Communications 1 - Assignment 1
+</title>
+
+<body bgcolor='blue'>
+
+<p>
+<h1>
+Please find the links below..<br><br><br>
+</h1>
+</p>
+
+<p>
+<h2>
+HTML File<br>
+<a href="html/nextpage.html">HTML</a><br><br><br>
+</h2>
+</p>
+
+<p>
+<h2>
+TEXT File<br>
+<a href="text/thankyou.txt">TEXT</a><br><br><br>
+</h2>
+</p>
+
+<p>
+<h2>
+GIF File<br>
+<a href="images/">GIF</a><br><br><br>
+</h2>
+</p>
+
+<p>
+<h2>
+PNG File<br>
+<a href="images/">PNG</a><br><br><br>
+</h2>
+</p>
+
+</body>
+
+</html>

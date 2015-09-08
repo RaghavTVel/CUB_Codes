@@ -1,10 +1,10 @@
 -- VERSION_4
 -- START DISKCACHE_2
 R:\eclipse_workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\DataCommAssignment1\com.python.pydev.analysis\v2_indexcache
-cli|1441597451478591000|R:\eclipse_workspace\DataCommAssignment1\cli.py
+cli|1441690774418435000|R:\eclipse_workspace\DataCommAssignment1\cli.py
 serv|1441438317558543000|R:\eclipse_workspace\DataCommAssignment1\serv.py
 serv2|1441444561288755000|R:\eclipse_workspace\DataCommAssignment1\serv2.py
-serv3|1441597131943417000|R:\eclipse_workspace\DataCommAssignment1\serv3.py
+serv3|1441699707818989000|R:\eclipse_workspace\DataCommAssignment1\serv3.py
 serv1|1441438352742802000|R:\eclipse_workspace\DataCommAssignment1\serv1.py
 -- END DISKCACHE
 -- START DICTIONARY
@@ -16,12 +16,13 @@ serv1|1441438352742802000|R:\eclipse_workspace\DataCommAssignment1\serv1.py
 5=serv1
 -- END DICTIONARY
 -- START TREE 1
-9
+10
 con|2|config!11@config!19@
 dat|7|data!27@datastring!19@data!19@data!35@datastringcontent!35@datastringlist!19@data!11@
 fil|6|file1stringcontent!11@file1stringcontent!35@file1content!19@file1asciicontent!35@file1asciicontent!19@file1asciicontent!11@
 hos|3|host!27@host!35@host!43@
 por|5|port!19@port!35@port!43@port!11@port!27@
+res|2|response_header!19@response_header_binary!19@
 roo|2|root!11@root!19@
 s|1|s!35@
 siz|4|size!27@size!35@size!19@size!11@
